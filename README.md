@@ -1,0 +1,2 @@
+# Reliable Data Transfer 2.0
+This is an implementation of reliable data transfer between two UDP sockets using a stop-and-wait protocol. Messages will be sent from a client to a server in 10-byte chunks, encapsulated with sequence numbers and a checksum. The server will then send back an ACK with a matching sequence number if it receives the expected sequence number and checksum. When the client finishes sending data, it will send a 0-byte packet to signal the end of the data transfer, which the server will acknowledge.
